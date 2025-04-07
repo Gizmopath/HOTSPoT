@@ -3,7 +3,7 @@ Hematoxylin & Eosin-based Open-access Tool for Segmentation of Portal Tracts
 
 This repository contains the weighted model and primary resources for deploying a segformer-based semantic segmentation model applied to Hematoxylin and Eosin (H&E)-stained liver biopsy images. This model is designed to automate the division of liver biopsy into portal and lobular zones, acting both as a pre-processing model for second-level tasks, allowing inference only on the desired zone, and to automate the annotation of areas for various types of spatial experiments.
 
-![alt text]()
+![Study_design](https://github.com/Gizmopath/HOTSPoT/blob/main/images/study.jpg)
 
 ## Methods
 
@@ -66,7 +66,7 @@ Images were acquired from various institutions, using scanners with different sp
 
 ---
 
-![alt text]()
+![Inference](https://github.com/Gizmopath/HOTSPoT/blob/main/images/results.jpg)
 
 ## Model Training
 
