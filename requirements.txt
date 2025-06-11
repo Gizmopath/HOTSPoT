@@ -1,0 +1,8 @@
+torch>=2.0
+torchvision
+transformers
+albumentations
+opencv-python
+Pillow
+tensorboard
+tqdm
