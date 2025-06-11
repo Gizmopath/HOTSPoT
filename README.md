@@ -1,21 +1,36 @@
-# ![ICON](INSERT_ICON_URL_HERE) HOTSPoT  
-**Hematoxylin & Eosin-based Open-access Tool for Segmentation of Portal Tracts**
+# <img src="https://github.com/Gizmopath/HOTSPoT/blob/main/images/icon.png" alt="ICON" style="width:-80%;"> **Hematoxylin & Eosin-based Open-access Tool for Segmentation of Portal Tracts**
 
-![COVER](INSERT_COVER_IMAGE_URL_HERE)
-
-HOTSPoT is a semantic segmentation tool based on **SegformerB0**, designed to automatically identify **portal tracts** in Hematoxylin and Eosin (H&E)-stained liver biopsies.  
+HOTSPoT is a semantic segmentation tool based on **Segformer**, designed to automatically identify **portal tracts** in Hematoxylin and Eosin (H&E)-stained liver biopsies.  
 It can be used both as a **pre-processing module** for downstream tasks (e.g., analysis on portal-only regions) and as an **annotation assistant** in spatial tissue experiments.
 
+![APPLICATIONS](https://github.com/Gizmopath/HOTSPoT/blob/main/images/Figure%206.jpg)
 ---
 
 ## 🧪 Methods
 
+![COVER](https://github.com/Gizmopath/HOTSPoT/blob/main/images/study.jpg)
+
 - Whole Slide Images (WSIs) collected from liver pathology reference institutions.
 - WSIs were anonymized and digitized using various scanners.
-- Liver tissue segmented using a custom QuPath pipeline.
 - Portal tracts manually annotated by expert hepatopathologists.
 - 256×256 pixel tiles extracted from annotated regions at 1μm/px resolution.
 - Fine-tuning performed on the [pretrained SegformerB0 model](https://huggingface.co/nvidia/segformer-b0-finetuned-ade-512-512).
+
+## 🧬 Dataset Summary
+
+| Institution       | Scanner         | Type | N°  | Format | Magnification | Resolution (µm/px) |
+|-------------------|-----------------|------|-----|--------|----------------|---------------------|
+| Monza             | Aperio          | TV   | 71  | .svs   | 20X            | 0.4940              |
+| Monza             | Hamamatsu       | TV   | 30  | .ndpi  | 20X            | 0.4416              |
+| Monza             | 3DHISTECH       | TV   | 64  | .mrxs  | 67X            | 0.1725              |
+| Hannover          | Aperio          | TV   | 64  | .svs   | 40X            | 0.2513              |
+| Milan             | Epredia         | TV   | 43  | .mrxs  | 20X            | 0.2425              |
+| Barcelona         | Hamamatsu       | Test | 5   | .ndpi  | 40X            | 0.2200              |
+| Buenos Aires      | Micro Visioneer | Test | 4   | .tif   | 10X            | 0.5860              |
+| Coimbra           | Roche           | Test | 5   | .tiff  | 40X            | 0.2500              |
+| Maastricht        | 3DHISTECH       | Test | 5   | .mrxs  | 20X            | 0.2425              |
+| Monza             | Leica           | Test | 5   | .svs   | 40X            | 0.2621              |
+| Palermo           | Philips         | Test | 5   | .tiff  | 40X            | 0.2500              |
 
 ---
 
@@ -40,26 +55,6 @@ It can be used both as a **pre-processing module** for downstream tasks (e.g., a
 | Maastricht        | 1,107 | AIH, PBC        | 6s             | 0.96     | 0.84     |
 | Palermo           | 1,605 | PBC             | 5s             | 0.93     | 0.82     |
 | **Full Test Set** | 8,789 | AIH, PBC, GVHD  | 38s            | **0.96** | **0.84** |
-
----
-
-## 🧬 Dataset Summary
-
-| Institution       | Scanner         | Type | N°  | Format | Magnification | Resolution (µm/px) |
-|-------------------|-----------------|------|-----|--------|----------------|---------------------|
-| Monza             | Aperio          | TV   | 71  | .svs   | 20X            | 0.4940              |
-| Monza             | Hamamatsu       | TV   | 30  | .ndpi  | 20X            | 0.4416              |
-| Monza             | 3DHISTECH       | TV   | 64  | .mrxs  | 67X            | 0.1725              |
-| Hannover          | Aperio          | TV   | 64  | .svs   | 40X            | 0.2513              |
-| Milan             | Epredia         | TV   | 43  | .mrxs  | 20X            | 0.2425              |
-| Barcelona         | Hamamatsu       | Test | 5   | .ndpi  | 40X            | 0.2200              |
-| Buenos Aires      | Micro Visioneer | Test | 4   | .tif   | 10X            | 0.5860              |
-| Coimbra           | Roche           | Test | 5   | .tiff  | 40X            | 0.2500              |
-| Maastricht        | 3DHISTECH       | Test | 5   | .mrxs  | 20X            | 0.2425              |
-| Monza             | Leica           | Test | 5   | .svs   | 40X            | 0.2621              |
-| Palermo           | Philips         | Test | 5   | .tiff  | 40X            | 0.2500              |
-
----
 
 ![Inference Results](https://github.com/Gizmopath/HOTSPoT/blob/main/images/results.jpg)
 
@@ -134,5 +129,4 @@ Users are responsible for complying with all applicable laws regarding the use o
 
 ## 📚 Citation
 
-If you use HOTSPoT in your research, please cite this repository appropriately.  
-[Add citation details or DOI if available]
+If you use HOTSPoT in your research, please cite the following paper and this repository appropriately.  
