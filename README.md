@@ -128,5 +128,5 @@ Users are responsible for complying with all applicable laws regarding the use o
 ---
 
 ## 📚 Citation
-
-If you use HOTSPoT in your research, please cite the following paper and this repository appropriately.  
+If you use the HOTSPoT model in your work or integrate it into your project via GitHub, please cite the following publication:
+Cazzaniga G. Automating liver biopsy segmentation with a robust, open-source tool for pathology research: the HOTSPoT model. npj Digital Medicine. 2025;8:455. https://doi.org/10.1038/s41746-025-01870-1
